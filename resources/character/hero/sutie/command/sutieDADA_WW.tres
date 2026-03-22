@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CharacterCommand" format=3 uid="uid://jf1rh4ufword"]
+
+[ext_resource type="Script" uid="uid://csjbcsxbjqo2k" path="res://resources/character/DamageStage.gd" id="1_nsxef"]
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="2_88c7o"]
+[ext_resource type="Script" uid="uid://xaa827ja5r0r" path="res://resources/character/CommandSequenceStage.gd" id="3_6m0k7"]
+
+[sub_resource type="Resource" id="Resource_jlkma"]
+script = ExtResource("1_nsxef")
+requires_normal_parry = true
+metadata/_custom_type_script = "uid://csjbcsxbjqo2k"
+
+[sub_resource type="Resource" id="Resource_wmyvn"]
+script = ExtResource("1_nsxef")
+damage_multiplier = 2.0
+damage_type = 1
+requires_perfect_parry = true
+metadata/_custom_type_script = "uid://csjbcsxbjqo2k"
+
+[resource]
+script = ExtResource("2_88c7o")
+input_string = "DADA"
+idle_string = "W"
+command_name = "苏铁-弹反"
+damage_stages = Array[ExtResource("1_nsxef")]([SubResource("Resource_jlkma"), SubResource("Resource_wmyvn")])
+metadata/_custom_type_script = "uid://0wosxeif3qdb"

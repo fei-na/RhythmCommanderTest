@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CharacterResource" format=3 uid="uid://b3ic1j8jmiv7s"]
+
+[ext_resource type="Script" uid="uid://bg82o2odieex3" path="res://resources/character/CharacterResource.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+name = "飞廉箭记"
+resource_id = "arrow_mark"
+sub_types = Array[String](["arrow"])
+max_total = 3

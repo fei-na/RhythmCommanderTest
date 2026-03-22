@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://djeb0cuoeaeet"]
+
+[ext_resource type="Script" uid="uid://c2xr7je45g1qj" path="res://scripts/core/GameManager.gd" id="1_1bvp3"]
+[ext_resource type="Script" uid="uid://b2gnni10jpx6w" path="res://scripts/rhythm/RhythmDetector.gd" id="2_lquwl"]
+[ext_resource type="Script" uid="uid://cqag2b6fxwu1g" path="res://scripts/rhythm/CommandRecognizer.gd" id="3_7mycd"]
+[ext_resource type="Script" uid="uid://b5bjuf25nruu0" path="res://scripts/rhythm/InputManager.gd" id="4_272bh"]
+[ext_resource type="Script" uid="uid://v53v530drob0" path="res://scripts/rhythm/RhythmCycleManager.gd" id="5_272bh"]
+[ext_resource type="Script" uid="uid://d0owv8jdu42h1" path="res://scripts/ui/RhythmUI.gd" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://bnkdnu12hwqdf" path="res://scripts/rhythm/ScoreManager.gd" id="6_5vw27"]
+[ext_resource type="PackedScene" uid="uid://b0kf5s3c6mex" path="res://player.tscn" id="7_player"]
+[ext_resource type="PackedScene" uid="uid://cqm3xhs2d8j5k" path="res://ground.tscn" id="8_ground"]
+[ext_resource type="Resource" uid="uid://d3wl6wolf2lc0" path="res://resources/character/hero/sutie/HeroSuTie.tres" id="10_4c57u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
+font_size = 24
+
+[node name="Main" type="Node2D" unique_id=800673457]
+
+[node name="GameManager" type="Node" parent="." unique_id=820619826]
+script = ExtResource("1_1bvp3")
+metadata/_custom_type_script = "uid://c2xr7je45g1qj"
+
+[node name="RhythmDetector" type="Node" parent="." unique_id=915201974 groups=["rhythm_detector"]]
+script = ExtResource("2_lquwl")
+bpm = 60
+metadata/_custom_type_script = "uid://b2gnni10jpx6w"
+
+[node name="CommandRecognizer" type="Node" parent="." unique_id=848891970 groups=["command_recognizer"]]
+script = ExtResource("3_7mycd")
+metadata/_custom_type_script = "uid://cqag2b6fxwu1g"
+
+[node name="InputManager" type="Node" parent="." unique_id=2100142667 node_paths=PackedStringArray("rhythm_detector", "command_recognizer", "cycle_manager")]
+script = ExtResource("4_272bh")
+rhythm_detector = NodePath("../RhythmDetector")
+command_recognizer = NodePath("../CommandRecognizer")
+cycle_manager = NodePath("../RhythmCycleManager")
+metadata/_custom_type_script = "uid://b5bjuf25nruu0"
+
+[node name="RhythmCycleManager" type="Node" parent="." unique_id=1885245400 node_paths=PackedStringArray("rhythm_detector", "command_recognizer", "score_manager") groups=["rhythm_cycle_manager"]]
+script = ExtResource("5_272bh")
+rhythm_detector = NodePath("../RhythmDetector")
+command_recognizer = NodePath("../CommandRecognizer")
+score_manager = NodePath("../ScoreManager")
+
+[node name="ScoreManager" type="Node" parent="." unique_id=1250841693 node_paths=PackedStringArray("rhythm_detector", "rhythm_cycle_manager", "command_recognizer") groups=["score_manager"]]
+script = ExtResource("6_5vw27")
+rhythm_detector = NodePath("../RhythmDetector")
+rhythm_cycle_manager = NodePath("../RhythmCycleManager")
+command_recognizer = NodePath("../CommandRecognizer")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=537089546]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=425130121]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_lquwl")
+
+[node name="BeatIndicator" type="Label" parent="CanvasLayer/Control" unique_id=464336639]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -0.5
+offset_right = 0.5
+offset_bottom = 23.0
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_lquwl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RatingLabel" type="Label" parent="CanvasLayer/Control" unique_id=1068151903]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QueueDisplay" type="Label" parent="CanvasLayer/Control" unique_id=575852879]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CommandLabel" type="Label" parent="CanvasLayer/Control" unique_id=519259722]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ground" parent="." unique_id=1567815376 instance=ExtResource("8_ground")]
+position = Vector2(576, 568)
+
+[node name="Player" parent="." unique_id=163466242 instance=ExtResource("7_player")]
+position = Vector2(200, 534)
+character_data = ExtResource("10_4c57u")
+jump_force = -280.0

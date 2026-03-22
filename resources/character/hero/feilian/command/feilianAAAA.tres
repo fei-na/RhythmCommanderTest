@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterCommand" format=3]
+
+[ext_resource type="Script" uid="uid://csjbcsxbjqo2k" path="res://resources/character/DamageStage.gd" id="1"]
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+input_string = "AAAA"
+command_name = "飞廉-后退"
+description = "后退并获得1箭"
+resource_gain = {
+"arrow_mark": {
+"arrow": 1
+}
+}

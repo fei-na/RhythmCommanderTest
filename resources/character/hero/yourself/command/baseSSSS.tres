@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CharacterCommand" format=3 uid="uid://1ltphr550j76"]
+
+[ext_resource type="Script" uid="uid://csjbcsxbjqo2k" path="res://resources/character/DamageStage.gd" id="1_4w0og"]
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="2_7up3f"]
+[ext_resource type="Script" uid="uid://xaa827ja5r0r" path="res://resources/character/CommandSequenceStage.gd" id="3_8xb1q"]
+
+[resource]
+script = ExtResource("2_7up3f")
+input_string = "SSSS"
+command_name = "通用-蓄力"
+metadata/_custom_type_script = "uid://0wosxeif3qdb"

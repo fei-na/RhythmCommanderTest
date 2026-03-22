@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CharacterCommand" format=3 uid="uid://du5vf7muygajn"]
+
+[ext_resource type="Script" uid="uid://csjbcsxbjqo2k" path="res://resources/character/DamageStage.gd" id="1_711ai"]
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="2_qbybe"]
+[ext_resource type="Script" uid="uid://xaa827ja5r0r" path="res://resources/character/CommandSequenceStage.gd" id="3_c8jaa"]
+
+[resource]
+script = ExtResource("2_qbybe")
+input_string = "DDDD"
+command_name = "苏铁-前进"
+resource_gain = {
+"sword_shield": {
+"shield": 1,
+"sword": 1
+}
+}
+metadata/_custom_type_script = "uid://0wosxeif3qdb"

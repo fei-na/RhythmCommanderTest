@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CharacterCommand" format=3 uid="uid://bav8ks5k6fl5h"]
+
+[ext_resource type="Script" uid="uid://csjbcsxbjqo2k" path="res://resources/character/DamageStage.gd" id="1_68rtx"]
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="2_42lwt"]
+[ext_resource type="Script" uid="uid://xaa827ja5r0r" path="res://resources/character/CommandSequenceStage.gd" id="3_hcwx4"]
+
+[sub_resource type="Resource" id="DamageStage_1"]
+script = ExtResource("1_68rtx")
+damage_multiplier = 6.0
+trigger_rate = 0.1
+
+[resource]
+script = ExtResource("2_42lwt")
+input_string = "A~~~"
+command_name = "苏铁-剑技"
+damage_stages = Array[ExtResource("1_68rtx")]([SubResource("DamageStage_1")])
+resource_cost = {
+"sword_shield": 4
+}
+metadata/_custom_type_script = "uid://0wosxeif3qdb"

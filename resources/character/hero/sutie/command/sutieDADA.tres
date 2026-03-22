@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CharacterCommand" format=3 uid="uid://dn03n1n1ujd1"]
+
+[ext_resource type="Script" uid="uid://csjbcsxbjqo2k" path="res://resources/character/DamageStage.gd" id="1_j7gut"]
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="2_3sw7j"]
+[ext_resource type="Script" uid="uid://xaa827ja5r0r" path="res://resources/character/CommandSequenceStage.gd" id="3_2kjv3"]
+
+[resource]
+script = ExtResource("2_3sw7j")
+input_string = "DADA"
+command_name = "苏铁-防御"
+defense_multiplier = 0.7
+resource_gain = {
+"sword_shield": {
+"shield": 2
+}
+}
+perfect_parry_window = 0.3
+resource_gain_on_perfect_parry = {
+"sword_shield": {
+"shield": 2
+}
+}
+metadata/_custom_type_script = "uid://0wosxeif3qdb"

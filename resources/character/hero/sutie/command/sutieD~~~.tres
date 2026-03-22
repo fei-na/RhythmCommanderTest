@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CharacterCommand" format=3 uid="uid://drv4dk24lo0fr"]
+
+[ext_resource type="Script" uid="uid://csjbcsxbjqo2k" path="res://resources/character/DamageStage.gd" id="1_r7pgh"]
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="2_pphy5"]
+[ext_resource type="Script" uid="uid://xaa827ja5r0r" path="res://resources/character/CommandSequenceStage.gd" id="3_fdk66"]
+
+[sub_resource type="Resource" id="Resource_r7pgh"]
+script = ExtResource("1_r7pgh")
+damage_multiplier = 8.0
+damage_type = 1
+trigger_rate = 0.1
+metadata/_custom_type_script = "uid://csjbcsxbjqo2k"
+
+[resource]
+script = ExtResource("2_pphy5")
+input_string = "D~~~"
+command_name = "苏铁-盾击"
+damage_stages = Array[ExtResource("1_r7pgh")]([SubResource("Resource_r7pgh")])
+metadata/_custom_type_script = "uid://0wosxeif3qdb"

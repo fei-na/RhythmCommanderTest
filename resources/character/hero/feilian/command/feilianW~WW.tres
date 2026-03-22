@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CharacterCommand" format=3 uid="uid://cskgjd2fc2k4t"]
+
+[ext_resource type="Script" uid="uid://csjbcsxbjqo2k" path="res://resources/character/DamageStage.gd" id="1"]
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="2"]
+[ext_resource type="Script" uid="uid://xaa827ja5r0r" path="res://resources/character/CommandSequenceStage.gd" id="3_en00l"]
+
+[sub_resource type="Resource" id="DamageStage_jump_shot_1"]
+script = ExtResource("1")
+damage_multiplier = 0.8
+damage_type = 4
+trigger_rate = 1.0
+damage_count = 8
+
+[resource]
+script = ExtResource("2")
+input_string = "W~WW"
+command_name = "飞廉-跳射1"
+description = "起跳后向下射出8支80%箭，消耗1箭"
+damage_stages = Array[ExtResource("1")]([SubResource("DamageStage_jump_shot_1")])
+resource_cost = {
+"arrow_mark": 1
+}

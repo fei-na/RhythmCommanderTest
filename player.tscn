@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b0kf5s3c6mex"]
+
+[ext_resource type="Script" uid="uid://bikqoc3bkq1fh" path="res://scripts/player/Player.gd" id="1_player"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_collision"]
+size = Vector2(32, 64)
+
+[node name="Player" type="CharacterBody2D" unique_id=1892117664]
+script = ExtResource("1_player")
+jump_force = -400.0
+
+[node name="Sprite" type="ColorRect" parent="." unique_id=1746102376]
+offset_left = -16.0
+offset_top = -64.0
+offset_right = 16.0
+color = Color(0.3, 0.6, 1, 1)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=1473415647]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_collision")

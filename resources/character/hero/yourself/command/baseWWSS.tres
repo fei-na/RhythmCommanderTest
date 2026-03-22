@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CharacterCommand" format=3 uid="uid://c1v5tub0aglns"]
+
+[ext_resource type="Script" uid="uid://csjbcsxbjqo2k" path="res://resources/character/DamageStage.gd" id="1_feyie"]
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="2_d3652"]
+[ext_resource type="Script" uid="uid://xaa827ja5r0r" path="res://resources/character/CommandSequenceStage.gd" id="3_28j7q"]
+
+[resource]
+script = ExtResource("2_d3652")
+input_string = "WWSS"
+command_name = "通用-净化"
+metadata/_custom_type_script = "uid://0wosxeif3qdb"

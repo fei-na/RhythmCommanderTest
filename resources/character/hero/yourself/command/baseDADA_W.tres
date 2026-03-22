@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterCommand" format=3 uid="uid://bhtf6a5selctp"]
+
+[ext_resource type="Script" uid="uid://csjbcsxbjqo2k" path="res://resources/character/DamageStage.gd" id="1_7b2hs"]
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="2_4jl72"]
+[ext_resource type="Script" uid="uid://xaa827ja5r0r" path="res://resources/character/CommandSequenceStage.gd" id="3_6ikou"]
+
+[resource]
+script = ExtResource("2_4jl72")
+input_string = "DADA"
+idle_string = "W"
+command_name = "通用-防御弹反"
+defense_multiplier = 1.0
+is_parry = true
+perfect_parry_window = 0.3
+metadata/_custom_type_script = "uid://0wosxeif3qdb"

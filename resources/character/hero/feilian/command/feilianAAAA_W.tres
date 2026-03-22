@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="CharacterCommand" format=3 uid="uid://cvengglvmq1j3"]
+
+[ext_resource type="Script" uid="uid://csjbcsxbjqo2k" path="res://resources/character/DamageStage.gd" id="1"]
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="2"]
+[ext_resource type="Script" uid="uid://xaa827ja5r0r" path="res://resources/character/CommandSequenceStage.gd" id="3_lf6xw"]
+
+[sub_resource type="Resource" id="DamageStage_perfect_dodge"]
+script = ExtResource("1")
+damage_multiplier = 0.5
+damage_type = 4
+trigger_rate = 1.0
+damage_count = 8
+requires_perfect_parry = true
+
+[sub_resource type="Resource" id="DamageStage_normal_dodge"]
+script = ExtResource("1")
+damage_multiplier = 0.5
+damage_type = 4
+trigger_rate = 1.0
+damage_count = 8
+requires_no_parry = true
+
+[resource]
+script = ExtResource("2")
+input_string = "AAAA"
+idle_string = "W"
+command_name = "飞廉-后跳射击"
+description = "闪避+向下射箭，完美闪避获得3箭，普通获得1箭"
+damage_stages = Array[ExtResource("1")]([SubResource("DamageStage_perfect_dodge"), SubResource("DamageStage_normal_dodge")])
+resource_gain = {
+"arrow_mark": {
+"arrow": 1
+}
+}

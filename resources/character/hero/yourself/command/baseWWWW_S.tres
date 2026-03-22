@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CharacterCommand" format=3 uid="uid://btr3gi6i4qog8"]
+
+[ext_resource type="Script" uid="uid://csjbcsxbjqo2k" path="res://resources/character/DamageStage.gd" id="1_828ed"]
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="2_i7p87"]
+[ext_resource type="Script" uid="uid://xaa827ja5r0r" path="res://resources/character/CommandSequenceStage.gd" id="3_qigfp"]
+
+[resource]
+script = ExtResource("2_i7p87")
+input_string = "WWWW"
+idle_string = "S"
+command_name = "通用-跳跃落地"
+metadata/_custom_type_script = "uid://0wosxeif3qdb"

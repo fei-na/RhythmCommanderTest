@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="CharacterCommand" format=3 uid="uid://3nacy7fbtvea"]
+
+[ext_resource type="Script" uid="uid://csjbcsxbjqo2k" path="res://resources/character/DamageStage.gd" id="1_hufwu"]
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="2_ct65x"]
+[ext_resource type="Script" uid="uid://xaa827ja5r0r" path="res://resources/character/CommandSequenceStage.gd" id="3_b7ia0"]
+
+[sub_resource type="Resource" id="Resource_hufwu"]
+script = ExtResource("1_hufwu")
+requires_target_in_range = true
+metadata/_custom_type_script = "uid://csjbcsxbjqo2k"
+
+[sub_resource type="Resource" id="Resource_ct65x"]
+script = ExtResource("1_hufwu")
+timing_percent = 0.25
+requires_target_in_range = true
+metadata/_custom_type_script = "uid://csjbcsxbjqo2k"
+
+[sub_resource type="Resource" id="Resource_b7ia0"]
+script = ExtResource("1_hufwu")
+timing_percent = 0.5
+requires_target_in_range = true
+metadata/_custom_type_script = "uid://csjbcsxbjqo2k"
+
+[sub_resource type="Resource" id="Resource_rki7c"]
+script = ExtResource("1_hufwu")
+timing_percent = 0.75
+requires_target_in_range = true
+metadata/_custom_type_script = "uid://csjbcsxbjqo2k"
+
+[sub_resource type="Resource" id="Resource_tiq77"]
+script = ExtResource("1_hufwu")
+requires_target_out_of_range = true
+metadata/_custom_type_script = "uid://csjbcsxbjqo2k"
+
+[sub_resource type="Resource" id="Resource_wmneg"]
+script = ExtResource("1_hufwu")
+timing_percent = 0.5
+requires_target_out_of_range = true
+metadata/_custom_type_script = "uid://csjbcsxbjqo2k"
+
+[resource]
+script = ExtResource("2_ct65x")
+input_string = "ADAD"
+command_name = "苏铁-攻击"
+damage_stages = Array[ExtResource("1_hufwu")]([SubResource("Resource_hufwu"), SubResource("Resource_ct65x"), SubResource("Resource_b7ia0"), SubResource("Resource_rki7c"), SubResource("Resource_tiq77"), SubResource("Resource_wmneg")])
+resource_gain = {
+"sword_shield": {
+"sword": 2
+}
+}
+metadata/_custom_type_script = "uid://0wosxeif3qdb"

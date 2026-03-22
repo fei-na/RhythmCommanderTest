@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="CharacterCommand" format=3 uid="uid://iti7tctct315"]
+
+[ext_resource type="Script" uid="uid://csjbcsxbjqo2k" path="res://resources/character/DamageStage.gd" id="1"]
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="2"]
+[ext_resource type="Script" uid="uid://xaa827ja5r0r" path="res://resources/character/CommandSequenceStage.gd" id="3_7834g"]
+
+[sub_resource type="Resource" id="DamageStage_jump_shot_1"]
+script = ExtResource("1")
+damage_multiplier = 0.8
+damage_type = 4
+trigger_rate = 1.0
+damage_count = 8
+
+[sub_resource type="Resource" id="DamageStage_jump_shot_2"]
+script = ExtResource("1")
+damage_type = 4
+trigger_rate = 1.0
+timing_percent = 33.0
+damage_count = 8
+
+[sub_resource type="Resource" id="DamageStage_jump_shot_3"]
+script = ExtResource("1")
+damage_multiplier = 1.2
+damage_type = 4
+trigger_rate = 1.0
+timing_percent = 66.0
+damage_count = 16
+
+[resource]
+script = ExtResource("2")
+input_string = "W~~~"
+command_name = "飞廉-跳射3"
+description = "起跳后射出8支80%箭、8支100%箭、16支120%箭，消耗全部3箭"
+damage_stages = Array[ExtResource("1")]([SubResource("DamageStage_jump_shot_1"), SubResource("DamageStage_jump_shot_2"), SubResource("DamageStage_jump_shot_3")])
+resource_cost = {
+"arrow_mark": 3
+}

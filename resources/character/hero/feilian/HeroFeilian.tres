@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://3nxmipbx6jrn"]
+
+[ext_resource type="Script" uid="uid://cm5mjx1h8oun" path="res://resources/character/CharacterData.gd" id="1"]
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="1_pkuat"]
+[ext_resource type="Resource" uid="uid://b3ic1j8jmiv7s" path="res://resources/character/hero/feilian/arrow_mark.tres" id="2"]
+[ext_resource type="Script" uid="uid://d0swj0rmli6u8" path="res://resources/character/CharacterCommandOverride.gd" id="2_1mqe4"]
+[ext_resource type="Resource" path="res://resources/character/hero/feilian/command/feilianAAAA.tres" id="2_rwe7b"]
+[ext_resource type="Script" uid="uid://bg82o2odieex3" path="res://resources/character/CharacterResource.gd" id="3_p86qa"]
+[ext_resource type="Resource" path="res://resources/character/hero/feilian/command/feilianAAAA_W.tres" id="3_pbxkf"]
+[ext_resource type="Resource" path="res://resources/character/hero/feilian/command/feilianAAAA_WD.tres" id="4_gb7xi"]
+[ext_resource type="Resource" path="res://resources/character/hero/feilian/command/feilianADAD.tres" id="5_edv1s"]
+[ext_resource type="Script" uid="uid://bwveqhaa1c3np" path="res://resources/character/Skill.gd" id="6_1ot1y"]
+[ext_resource type="Resource" path="res://resources/character/hero/feilian/command/feilianADAD_A.tres" id="6_fx1fb"]
+[ext_resource type="Resource" path="res://resources/character/hero/feilian/command/feilianADAD_D.tres" id="7_vqban"]
+[ext_resource type="Resource" path="res://resources/character/hero/feilian/command/feilianW~~~.tres" id="8_5oa7p"]
+[ext_resource type="Resource" path="res://resources/character/hero/feilian/command/feilianW~~W.tres" id="9_3pbj0"]
+[ext_resource type="Resource" path="res://resources/character/hero/feilian/command/feilianW~WW.tres" id="10_0blka"]
+[ext_resource type="Resource" uid="uid://db4aedjpbx6wc" path="res://resources/character/hero/yourself/command/baseDDDD.tres" id="11_3tfeb"]
+[ext_resource type="Resource" uid="uid://0t5eql83al3x" path="res://resources/character/hero/yourself/command/baseDDDD_A.tres" id="12_gbw48"]
+[ext_resource type="Resource" uid="uid://1ltphr550j76" path="res://resources/character/hero/yourself/command/baseSSSS.tres" id="13_h5402"]
+[ext_resource type="Resource" uid="uid://d2ig3q3uckrg7" path="res://resources/character/hero/yourself/command/baseWASD.tres" id="14_rvepe"]
+[ext_resource type="Resource" uid="uid://c1v5tub0aglns" path="res://resources/character/hero/yourself/command/baseWWSS.tres" id="15_c02k4"]
+[ext_resource type="Resource" uid="uid://c5ku1jgtcfg2u" path="res://resources/character/hero/yourself/command/baseWWWW.tres" id="16_uruns"]
+[ext_resource type="Resource" uid="uid://btr3gi6i4qog8" path="res://resources/character/hero/yourself/command/baseWWWW_S.tres" id="17_0fpxv"]
+
+[resource]
+script = ExtResource("1")
+character_name = "飞廉"
+character_id = "feilian"
+max_health = 80
+available_commands = Array[ExtResource("1_pkuat")]([ExtResource("2_rwe7b"), ExtResource("3_pbxkf"), ExtResource("4_gb7xi"), ExtResource("5_edv1s"), ExtResource("6_fx1fb"), ExtResource("7_vqban"), ExtResource("8_5oa7p"), ExtResource("9_3pbj0"), ExtResource("10_0blka"), ExtResource("11_3tfeb"), ExtResource("12_gbw48"), ExtResource("13_h5402"), ExtResource("14_rvepe"), ExtResource("15_c02k4"), ExtResource("16_uruns"), ExtResource("17_0fpxv")])
+resources = Array[ExtResource("3_p86qa")]([ExtResource("2")])

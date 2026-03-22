@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CharacterCommand" format=3 uid="uid://wmusbm1miure"]
+
+[ext_resource type="Script" uid="uid://csjbcsxbjqo2k" path="res://resources/character/DamageStage.gd" id="1_1o6gg"]
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="2_s8f5j"]
+[ext_resource type="Script" uid="uid://xaa827ja5r0r" path="res://resources/character/CommandSequenceStage.gd" id="3_q2u7t"]
+
+[sub_resource type="Resource" id="Resource_1o6gg"]
+script = ExtResource("1_1o6gg")
+metadata/_custom_type_script = "uid://csjbcsxbjqo2k"
+
+[resource]
+script = ExtResource("2_s8f5j")
+input_string = "ADAD"
+command_name = "通用-攻击"
+damage_stages = Array[ExtResource("1_1o6gg")]([SubResource("Resource_1o6gg")])
+metadata/_custom_type_script = "uid://0wosxeif3qdb"

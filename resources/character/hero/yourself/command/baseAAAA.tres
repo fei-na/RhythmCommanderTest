@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CharacterCommand" format=3 uid="uid://c1mh6g2cca1fh"]
+
+[ext_resource type="Script" uid="uid://csjbcsxbjqo2k" path="res://resources/character/DamageStage.gd" id="1_bcl5y"]
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="2_s8i4h"]
+[ext_resource type="Script" uid="uid://xaa827ja5r0r" path="res://resources/character/CommandSequenceStage.gd" id="3_47xjr"]
+
+[resource]
+script = ExtResource("2_s8i4h")
+input_string = "AAAA"
+command_name = "通用-后退"
+defense_multiplier = 0.0
+can_use_in_air = false
+metadata/_custom_type_script = "uid://0wosxeif3qdb"

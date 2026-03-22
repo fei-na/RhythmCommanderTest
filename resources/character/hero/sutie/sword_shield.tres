@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CharacterResource" format=3 uid="uid://dbw65mpy4fxnc"]
+
+[ext_resource type="Script" uid="uid://bg82o2odieex3" path="res://resources/character/CharacterResource.gd" id="1_dotwj"]
+
+[resource]
+script = ExtResource("1_dotwj")
+name = "战士剑盾势"
+resource_id = "sword_shield"
+sub_types = Array[String](["sword", "shield"])
+metadata/_custom_type_script = "uid://bg82o2odieex3"

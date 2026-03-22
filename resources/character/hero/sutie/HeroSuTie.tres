@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://d3wl6wolf2lc0"]
+
+[ext_resource type="Script" uid="uid://0wosxeif3qdb" path="res://resources/character/CharacterCommand.gd" id="1_ha725"]
+[ext_resource type="Resource" uid="uid://3nacy7fbtvea" path="res://resources/character/hero/sutie/command/sutieADAD.tres" id="2_08n7r"]
+[ext_resource type="Script" uid="uid://d0swj0rmli6u8" path="res://resources/character/CharacterCommandOverride.gd" id="2_qdhak"]
+[ext_resource type="Resource" uid="uid://bav8ks5k6fl5h" path="res://resources/character/hero/sutie/command/sutieA~~~.tres" id="3_ti86y"]
+[ext_resource type="Resource" uid="uid://dn03n1n1ujd1" path="res://resources/character/hero/sutie/command/sutieDADA.tres" id="4_esmsv"]
+[ext_resource type="Script" uid="uid://bg82o2odieex3" path="res://resources/character/CharacterResource.gd" id="4_m5ov2"]
+[ext_resource type="Resource" uid="uid://rt7k4flmebfm" path="res://resources/character/hero/sutie/command/sutieDADA_W.tres" id="5_affkm"]
+[ext_resource type="Resource" uid="uid://dbw65mpy4fxnc" path="res://resources/character/hero/sutie/sword_shield.tres" id="5_fxa6a"]
+[ext_resource type="Resource" uid="uid://jf1rh4ufword" path="res://resources/character/hero/sutie/command/sutieDADA_WW.tres" id="6_b41io"]
+[ext_resource type="Script" uid="uid://cm5mjx1h8oun" path="res://resources/character/CharacterData.gd" id="6_lqkrs"]
+[ext_resource type="Script" uid="uid://bwveqhaa1c3np" path="res://resources/character/Skill.gd" id="7_6wol1"]
+[ext_resource type="Resource" uid="uid://bh12y3adcasgy" path="res://resources/character/hero/sutie/command/sutieDADA_WWW.tres" id="7_l26hc"]
+[ext_resource type="Resource" uid="uid://bto5cqluuovw2" path="res://resources/character/hero/sutie/command/sutieDADA_WWWW.tres" id="8_1kuaf"]
+[ext_resource type="Resource" uid="uid://du5vf7muygajn" path="res://resources/character/hero/sutie/command/sutieDDDD.tres" id="9_18mo7"]
+[ext_resource type="Resource" uid="uid://drv4dk24lo0fr" path="res://resources/character/hero/sutie/command/sutieD~~~.tres" id="10_gkccr"]
+[ext_resource type="Resource" uid="uid://c1mh6g2cca1fh" path="res://resources/character/hero/yourself/command/baseAAAA.tres" id="11_5idsd"]
+[ext_resource type="Resource" uid="uid://dcnynnrre8m17" path="res://resources/character/hero/yourself/command/baseAAAA_D.tres" id="12_5lsd5"]
+[ext_resource type="Resource" uid="uid://0t5eql83al3x" path="res://resources/character/hero/yourself/command/baseDDDD_A.tres" id="13_bkwbu"]
+[ext_resource type="Resource" uid="uid://1ltphr550j76" path="res://resources/character/hero/yourself/command/baseSSSS.tres" id="14_1yftq"]
+[ext_resource type="Resource" uid="uid://d2ig3q3uckrg7" path="res://resources/character/hero/yourself/command/baseWASD.tres" id="15_40v5i"]
+[ext_resource type="Resource" uid="uid://c1v5tub0aglns" path="res://resources/character/hero/yourself/command/baseWWSS.tres" id="16_2p1vw"]
+[ext_resource type="Resource" uid="uid://c5ku1jgtcfg2u" path="res://resources/character/hero/yourself/command/baseWWWW.tres" id="17_6ic4r"]
+[ext_resource type="Resource" uid="uid://btr3gi6i4qog8" path="res://resources/character/hero/yourself/command/baseWWWW_S.tres" id="18_74xmx"]
+
+[resource]
+script = ExtResource("6_lqkrs")
+character_name = "苏铁"
+character_id = "sutie"
+max_health = 120
+parry_perfect_resource_gain = {
+"sword_shield": {
+"shield": 2
+}
+}
+available_commands = Array[ExtResource("1_ha725")]([ExtResource("2_08n7r"), ExtResource("3_ti86y"), ExtResource("4_esmsv"), ExtResource("5_affkm"), ExtResource("6_b41io"), ExtResource("7_l26hc"), ExtResource("8_1kuaf"), ExtResource("9_18mo7"), ExtResource("10_gkccr"), ExtResource("11_5idsd"), ExtResource("12_5lsd5"), ExtResource("13_bkwbu"), ExtResource("14_1yftq"), ExtResource("15_40v5i"), ExtResource("16_2p1vw"), ExtResource("17_6ic4r"), ExtResource("18_74xmx")])
+resources = Array[ExtResource("4_m5ov2")]([ExtResource("5_fxa6a")])
+metadata/_custom_type_script = "uid://cm5mjx1h8oun"
