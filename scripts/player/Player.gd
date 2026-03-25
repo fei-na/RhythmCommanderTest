@@ -139,6 +139,11 @@ func _ready() -> void:
 		cycle_manager.long_press_input.connect(_on_long_press_input)
 		cycle_manager.skill_triggered.connect(_on_skill_triggered)
 
+	# 监听命令识别信号以应用资源获得
+	var command_recognizer = get_tree().get_first_node_in_group("command_recognizer")
+	if command_recognizer:
+		command_recognizer.command_recognized.connect(_on_command_recognized)
+
 func _on_idle_phase_started() -> void:
 	# 重置翻滚状态
 	has_rolled_back = false
@@ -699,7 +704,7 @@ func execute_command(command: CharacterCommand) -> void:
 			var char_resource = character_data.get_resource(resource_id)
 			if char_resource:
 				char_resource.remove(cost)
-				print("💸 消耗资源 %s -%d (剩余: %d/%d)" % [resource_id, cost, char_resource.current, char_resource.max_amount])
+				print("💸 消耗资源 %s -%d (剩余: %d/%d)" % [resource_id, cost, char_resource.get_total(), char_resource.max_total])
 
 	# 根据 input_string 判断命令类型并执行
 	var input_str = command.input_string if command else ""
@@ -747,8 +752,9 @@ func execute_command(command: CharacterCommand) -> void:
 			print("❓ 未知命令: %s" % input_str)
 
 func _on_command_recognized(command: CharacterCommand, sequence: Array, time_since_beat: float) -> void:
-	# 新信号返回 CharacterCommand
-	_on_command_from_resource(command)
+	# 注意：execute_command已由RhythmCycleManager调用
+	# 这里只处理资源获得
+	_apply_resource_gain(command)
 
 ## 从 CharacterCommand 资源识别到命令
 func _on_command_from_resource(command: CharacterCommand) -> void:
@@ -776,7 +782,7 @@ func _check_resource_cost(command: CharacterCommand) -> bool:
 	for resource_id in command.resource_cost:
 		var cost = command.resource_cost[resource_id]
 		var char_resource = character_data.get_resource(resource_id)
-		if char_resource and char_resource.current < cost:
+		if char_resource and char_resource.get_total() < cost:
 			return false
 	return true
 

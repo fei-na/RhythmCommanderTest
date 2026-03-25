@@ -88,7 +88,13 @@ func add_sub_type(sub_type: String, amount: int = 1) -> int:
 		var current = sub_type_counts.get(sub_type, 0)
 		var new_val = current + amount
 		if not can_overflow:
-			new_val = clampi(new_val, min_amount, max_total)
+			# 先计算添加后的总资源数
+			var total_after = old + amount
+			# 如果超出上限，只添加能添加的部分
+			if total_after > max_total:
+				new_val = current + (max_total - old)
+				if new_val < min_amount:
+					new_val = min_amount
 		sub_type_counts[sub_type] = new_val
 	return get_total() - old
 

@@ -22,7 +22,6 @@ metadata/_custom_type_script = "uid://c2xr7je45g1qj"
 
 [node name="RhythmDetector" type="Node" parent="." unique_id=915201974 groups=["rhythm_detector"]]
 script = ExtResource("2_lquwl")
-bpm = 60
 metadata/_custom_type_script = "uid://b2gnni10jpx6w"
 
 [node name="CommandRecognizer" type="Node" parent="." unique_id=848891970 groups=["command_recognizer"]]

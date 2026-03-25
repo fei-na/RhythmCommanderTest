@@ -150,9 +150,8 @@ func _parse_input_string() -> void:
 			beats += 1
 			j += 1
 
-		# 添加 beats 个重复的 key（长按用重复按键表示）
-		for _k in range(beats):
-			parsed_input_keys.append(key)
+		# 长按时只添加1个元素，parsed_beats_per_key 记录总拍数
+		parsed_input_keys.append(key)
 		parsed_beats_per_key.append(beats)
 
 		if beats > 1:
@@ -182,10 +181,10 @@ func _parse_idle_string() -> void:
 ## 字符转 DrumType
 func _char_to_drum_type(char: String) -> int:
 	match char.to_upper():
-		"W": return 0  # UP
-		"A": return 1  # LEFT
-		"S": return 2  # DOWN
-		"D": return 3  # RIGHT
+		"W": return 0  # UP (RhythmDetector.DrumType.UP)
+		"A": return 2  # LEFT (RhythmDetector.DrumType.LEFT)
+		"S": return 1  # DOWN (RhythmDetector.DrumType.DOWN)
+		"D": return 3  # RIGHT (RhythmDetector.DrumType.RIGHT)
 		_: return -1
 
 ## 获取总拍数
